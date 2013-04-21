@@ -7,13 +7,6 @@ namespace medidata.localeCloud.api.pub.dtos.models
 {
     public class TranslationTask
     {
-        public long TokenId { get; set; }
-
-        public long? UserId { get; set; }
-
-        public string LocaleId { get; set; }
-
-        public long AppId { get; set; }
 
         public bool IsActive { get; set; }
 

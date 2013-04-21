@@ -13,8 +13,6 @@ namespace medidata.localeCloud.api.pub.dtos.models
 
         public int Order { get; set; }
 
-        public long AppId { get; set; }
-
         public bool IsActive { get; set; }
 
         public DateTime CreatedOn { get; set; }

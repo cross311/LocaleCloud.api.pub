@@ -9,10 +9,6 @@ namespace medidata.localeCloud.api.pub.dtos.models
     {
         public string Name { get; set; }
 
-        public string NormalizedName { get; set; }
-
-        public string BaseLocaleId { get; set; }
-
         public List<string> LocaleIds { get; set; }
 
         public bool AllowAutoCreate { get; set; }

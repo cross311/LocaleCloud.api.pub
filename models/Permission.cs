@@ -7,10 +7,6 @@ namespace medidata.localeCloud.api.pub.dtos.models
 {
     public class Permission
     {
-        public long AppId { get; set; }
-
-        public long UserId { get; set; }
-
         public PermissionType PermissionType { get; set; }
 
         public bool IsActive { get; set; }
