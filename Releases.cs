@@ -18,14 +18,14 @@ namespace medidata.localeCloud.api.pub.dtos
         [ApiMember(Name = "ReleaseName*", Description = "Filter param: single app's release", IsRequired = false, ParameterType = "path")]
         public string ReleaseName { get; set; }
 
-        public bool IsAllRequest()
-        {
-            return string.IsNullOrEmpty(AppName) && string.IsNullOrEmpty(ReleaseName);
-        }
-
         public bool IsByApplicationRequest()
         {
             return !string.IsNullOrEmpty(AppName) && string.IsNullOrEmpty(ReleaseName);
+        }
+
+        public bool IsSingleRequest()
+        {
+            return !string.IsNullOrEmpty(AppName) && !string.IsNullOrEmpty(ReleaseName);
         }
     }
 
