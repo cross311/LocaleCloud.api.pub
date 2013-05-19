@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medidata.localeCloud.api.pu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medidata.localeCloud.api.pub.client.csharp", "medidata.localeCloud.api.pub.client.csharp\medidata.localeCloud.api.pub.client.csharp.csproj", "{9B62E7AE-1226-41EC-920A-5E9F48654E6A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{6DE94514-E917-49C3-8130-5C7198582FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clientCSharpTest", "clientCSharpTest\clientCSharpTest.csproj", "{340E8AB6-041D-42C9-A58A-F1033C081550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,8 +23,15 @@ Global
 		{9B62E7AE-1226-41EC-920A-5E9F48654E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B62E7AE-1226-41EC-920A-5E9F48654E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B62E7AE-1226-41EC-920A-5E9F48654E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340E8AB6-041D-42C9-A58A-F1033C081550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340E8AB6-041D-42C9-A58A-F1033C081550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340E8AB6-041D-42C9-A58A-F1033C081550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340E8AB6-041D-42C9-A58A-F1033C081550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{340E8AB6-041D-42C9-A58A-F1033C081550} = {6DE94514-E917-49C3-8130-5C7198582FAA}
 	EndGlobalSection
 EndGlobal
