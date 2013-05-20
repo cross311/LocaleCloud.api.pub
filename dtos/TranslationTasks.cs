@@ -19,31 +19,31 @@ namespace medidata.localeCloud.api.pub.dtos
         public string AppName { get; set; }
 
         [ApiMember(Name = "Locales", Description = "Filter param: translation tasks for locale (2-5 char locale code (en-us))", IsRequired = false, ParameterType = "path", AllowMultiple = true)]
-        public string Locales { get; set; }
+        public List<string> Locales { get; set; }
 
         public bool IsUnassignedByApp()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && string.IsNullOrWhiteSpace(Locales);
+            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && (Locales == null && Locales.Count == 0);
         }
 
         public bool IsUnassignedByAppAndLocales()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Locales);
+            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && !(Locales == null && Locales.Count == 0);
         }
 
         public bool IsAssignedByApp()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && string.IsNullOrWhiteSpace(Locales);
+            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && (Locales == null && Locales.Count == 0);
         }
 
         public bool IsAssignedByAppAndLocales()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Locales);
+            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && !(Locales == null && Locales.Count == 0);
         }
 
         public bool IsAllAssigned()
         {
-            return string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && string.IsNullOrWhiteSpace(Locales);
+            return string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && (Locales == null && Locales.Count == 0);
         }
     }
 

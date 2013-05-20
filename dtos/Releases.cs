@@ -10,7 +10,7 @@ namespace medidata.localeCloud.api.pub.dtos
     [Route("/releases", "GET", Summary = "Get all releases meeting filter criteria.")]
     [Route("/apps/{AppName}/releases", "GET", Summary = "Get all releases in app.")]
     [Route("/apps/{AppName}/releases/{ReleaseName*}", "GET", Summary = "Get single release with matching name in app.")]
-    public class Releases : IReturn<List<Locale>>
+    public class Releases : IReturn<List<Release>>
     {
         [ApiMember(Name = "AppName", Description = "Filter param: for app's releases", IsRequired = true, ParameterType = "path")]
         public string AppName { get; set; }
