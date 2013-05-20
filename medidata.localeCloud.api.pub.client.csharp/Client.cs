@@ -54,6 +54,11 @@ namespace medidata.localeCloud.api.pub.client.csharp
             return m_client.Get(new Apps());
         }
 
+        public App GetApp(string name)
+        {
+            return m_client.Get(new Apps { AppName = name }).Single();
+        }
+
         public void CreateApp(string name, string baseLocale, string startReleaseName, bool allowAutoCreate)
         {
             m_client.Put(new SaveApp
@@ -237,7 +242,7 @@ namespace medidata.localeCloud.api.pub.client.csharp
 
         public void CreateTokenForRelease(string app, string release, string name)
         {
-            m_client.Put(new TokenDetails
+            m_client.Put(new CreateDeleteTokenAtRelease
             {
                 AppName = app,
                 ReleaseName = release,
@@ -247,7 +252,7 @@ namespace medidata.localeCloud.api.pub.client.csharp
 
         public void DeleteTokenForRelease(string app, string release, string name)
         {
-            m_client.Delete(new TokenDetails
+            m_client.Delete(new CreateDeleteTokenAtRelease
             {
                 AppName = app,
                 ReleaseName = release,
@@ -268,7 +273,7 @@ namespace medidata.localeCloud.api.pub.client.csharp
 
         public void UpdateTranslation(string app, string release, string locale, string token, string translation)
         {
-            m_client.Put(new UpdateTranslation
+            m_client.Post(new UpdateTranslation
             {
                 AppName = app,
                 ReleaseName = release,
@@ -280,7 +285,7 @@ namespace medidata.localeCloud.api.pub.client.csharp
 
         public void UpdateTranslations(string app, string release, string locale, Dictionary<string,string> tokenTranslationUpdates)
         {
-            m_client.Put(new UpdateTranslation
+            m_client.Post(new UpdateTranslation
             {
                 AppName = app,
                 ReleaseName = release,
