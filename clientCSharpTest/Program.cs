@@ -54,6 +54,8 @@ namespace clientCSharpTest
 
             Console.WriteLine(string.Format("JA: {0}={1}", token1.Name, translations_ja[token1.Name]));
 
+            comments = client.GetCommentsForToken(app.Name, release.Name, token1.Name);
+
             foreach (var comment in comments)
             {
                 Console.WriteLine(string.Format("Comment: {0}", comment.Text));
