@@ -23,27 +23,27 @@ namespace medidata.localeCloud.api.pub.dtos
 
         public bool IsUnassignedByApp()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && (Locales == null && Locales.Count == 0);
+            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && (Locales == null || Locales.Count == 0);
         }
 
         public bool IsUnassignedByAppAndLocales()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && !(Locales == null && Locales.Count == 0);
+            return !string.IsNullOrWhiteSpace(AppName) && string.IsNullOrWhiteSpace(Username) && !(Locales == null || Locales.Count == 0);
         }
 
         public bool IsAssignedByApp()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && (Locales == null && Locales.Count == 0);
+            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && (Locales == null || Locales.Count == 0);
         }
 
         public bool IsAssignedByAppAndLocales()
         {
-            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && !(Locales == null && Locales.Count == 0);
+            return !string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && !(Locales == null || Locales.Count == 0);
         }
 
         public bool IsAllAssigned()
         {
-            return string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && (Locales == null && Locales.Count == 0);
+            return string.IsNullOrWhiteSpace(AppName) && !string.IsNullOrWhiteSpace(Username) && (Locales == null || Locales.Count == 0);
         }
     }
 
